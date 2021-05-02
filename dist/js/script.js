@@ -23,6 +23,7 @@ const menu = document.querySelector('.menu'),
     window.addEventListener("keydown", (e) => {
         if (e.key == 'Escape') {
             menu.classList.remove('active');
+            hamburger.classList.remove('active');  
         }
     });
     deleteClass(closeMenu);

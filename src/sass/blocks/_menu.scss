@@ -57,6 +57,14 @@
         top: 25px;
         right: 25px;
         cursor: pointer;
+        &:hover {
+            svg{
+                transition: all 0.6s;
+                path{
+                    fill: white;
+                }
+            }
+        }
     }
     &__list {
         list-style-type: none;
@@ -72,7 +80,10 @@
         transition: all 0.5s;
         &:hover {
             font-size: 27px;
-
+            
+            &:before {
+                border-radius:20%;
+            }
         }
         &:before{
             content: '';
@@ -83,7 +94,7 @@
             border-radius: 100%;
             width: 15px;
             height: 15px;
-    
+            transition: all 0.6s;
         }
         a {
             text-decoration: none;
@@ -101,12 +112,9 @@
         transform: translateX(-50%);
         bottom: 50px;
         &-link{
-            transition: all 0.3s;
             &:hover {
                 svg{
-                    height: 25px;
-                    width: 24px;
-                    transition: all 0.3s;
+                    transition: all 0.6s;
                     path{
                         fill: white;
                     }
