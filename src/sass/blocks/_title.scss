@@ -10,11 +10,28 @@
         font-size: 16px;
         line-height: 24px;
     }
+    &_fz20 {
+        font-size: 20px;
+        line-height: 30px;
+    }
     &_fz36 {
         font-size: 36px;
     }
     &_fz48 {
         font-size: 48px;
+    }
+    &_center {
+        position: relative;
+        text-align: center;
+        @include before_circle;
+        &:before {
+            top: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    &_subtitle {
+        text-align: center;
     }
     
 }

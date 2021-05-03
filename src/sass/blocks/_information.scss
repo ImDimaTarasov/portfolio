@@ -1,5 +1,5 @@
-.aboutMe{
-    padding: 120px 100px 120px 0;
+.about{
+    padding: 120px 100px 0 0;
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 70px;
@@ -10,9 +10,7 @@
         @include before_circle;
         z-index: 2;
     }
-    &__line {
-        border-top: 3px solid $main-color;
-        width: 60px;
+    &__divider {
         margin: 4px 0 20px 0;
     }
     &__text {

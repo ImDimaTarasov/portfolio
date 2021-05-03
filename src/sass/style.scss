@@ -13,9 +13,15 @@
     margin: 0 auto;
 }
 
+.divider {
+    border-top: 3px solid $main-color;
+    width: 60px;
+}
+
 @import 'blocks/promo';
 @import 'blocks/title';
 @import 'blocks/btn';
 @import 'blocks/sidepanel';
 @import 'blocks/menu';
 @import 'blocks/information';
+@import 'blocks/exp';
