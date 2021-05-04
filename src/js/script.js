@@ -28,3 +28,11 @@ const menu = document.querySelector('.menu'),
     });
     deleteClass(closeMenu);
     deleteClass(overMenu);
+
+
+const percents = document.querySelectorAll('.skills-box_percent'),
+    scales = document.querySelectorAll('.skills-box__scale_indicator');
+
+percents.forEach((item, i) => {
+    scales[i].style.width = item.innerHTML;
+});

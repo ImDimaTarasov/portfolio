@@ -4,10 +4,11 @@
         margin: 25px auto 60px auto;
     }
     &__wrapper{
-        padding: 0 65px;
+        
         display: grid;
         grid-template-columns: repeat(2, 425px);
         column-gap: 135px;
+        justify-content: center;
     }
     &__column {
         &-title {
