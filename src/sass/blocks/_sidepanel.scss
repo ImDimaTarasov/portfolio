@@ -12,11 +12,11 @@
     &__divider {
         height: 70px;
         width: 2px;
-        background-color: black;
+        background-color: white;
     }
     &__link{
 
-        img{
+        svg{
             transition: all 0.6s;
             &:hover {
             transform: rotate(90deg) scale(1.5);
@@ -29,6 +29,7 @@
         font-weight: bold;
         font-size: 16px;
         line-height: 30px;
+        color: white;
     }
 
 }

@@ -11,6 +11,7 @@
     transition: all 1s;
     visibility: visible;
     opacity: 1;
+    
     &.active {
         right: 0px;
         visibility: hidden;
@@ -18,12 +19,22 @@
     }
     span {
         display: block;
-        width: 30px;
-        height: 3px;
-        background-color: #151812;
-    }
-    span.long{
         width: 36px;
+        height: 3px;
+        background-color: $green;
+        transition: all 0.6s;
+    }
+    span.middle {
+        width: 30px;
+    }
+    span.short {
+        width: 24px;
+    }
+    
+    &:hover {
+        span {
+            width: 36px;
+        }
     }
 }
 
@@ -37,6 +48,7 @@
     visibility: hidden;
     opacity: 0;
     transition: all 1s;
+    
     &.active {
         left: 0;
         visibility: visible;
@@ -48,7 +60,7 @@
         height: 100%;
         padding-top: 140px;
         padding-left: 40px;
-        background-color: $main-color;
+        background-color: #0D151A;
         transition: all 0.6s;
         z-index: 10;
     }
@@ -57,51 +69,107 @@
         top: 25px;
         right: 25px;
         cursor: pointer;
-        &:hover {
-            svg{
-                transition: all 0.6s;
-                path{
-                    fill: white;
-                }
+        svg{
+            transition: all 0.6s;
+            &:hover {
+                transform: scale(1.2);
             }
         }
     }
     &__list {
         list-style-type: none;
-        padding-left: 35px;
     }
     &__link {
+        padding:5px 0 5px 20px;
         position: relative;
-        font-weight: bold;
+        font-weight: 700;
         font-size: 24px;
         line-height: 36px;
-        margin-bottom: 15px;
+        margin-right: 25px;
+        // margin-bottom: 15px;
         text-transform: uppercase;
-        transition: all 0.5s;
+        transition: all 0.6s;
+        cursor: pointer;
         &:hover {
             font-size: 27px;
-            
-            &:before {
-                border-radius:20%;
+            background-color: rgba(130, 249, 161, 0.07);
+            &:after{
+                content: "";
+                display: block;
+                width: 4px;
+                height: 100%;
+                background-color: rgb(222, 255, 231);
+                position: absolute;
+                left: 0px;
+                top: 0px;
+                box-shadow: $green 3px 0px 22px;
+                border-radius: 6px 0px 0px;
             }
-        }
-        &:before{
-            content: '';
-            position: absolute;
-            left: -35px;
-            top: 10px;
-            border: 1px solid black;
-            border-radius: 100%;
-            width: 15px;
-            height: 15px;
-            transition: all 0.6s;
+       
         }
         a {
             text-decoration: none;
             color: white;
         }
-       
+        &_green {
+            &:hover {
+                a {
+                    color: $green;
+                }
+            }
+        }
+        &_yellow {
+            &:hover {
+                background-color: rgba(247, 249, 130, 0.07);
+                a {
+                    color: $yellow;
+                }
+                &:after{
+                    background-color: rgb(253, 255, 222);
+                    box-shadow: $yellow 3px 0px 22px;
+                }
+            }
+        }
+        &_orange {
+            &:hover {
+                background-color: rgba(249, 187, 130, 0.07);
+                a {
+                    color: $orange;
+                }
+                &:after{
+                    background-color: rgb(255, 237, 222);
+                    box-shadow: $orange 3px 0px 22px;
+                }
+            }
+        }
+        &_pink {
+            &:hover {
+                background-color: rgba(249, 130, 223, 0.07);
+                a {
+                    color: $pink;
+                }
+                &:after{
+                    background-color: rgb(255, 222, 253);
+                    box-shadow: $pink 3px 0px 22px;
+                }
+            }
+        }
+        &_blue {
+            &:hover {
+                background-color: rgba(132, 130, 249, 0.07);
+                a {
+                    color: $blue;
+                }
+                &:after{
+                    background-color: rgb(222, 223, 255);
+                    box-shadow: $blue 3px 0px 22px;
+                }
+            }
+        }
+        
     }
+  
+    
     &__social {
         display: flex;
         justify-content: space-between;
@@ -112,17 +180,19 @@
         transform: translateX(-50%);
         bottom: 50px;
         &-link{
-            &:hover {
-                svg{
-                    transition: all 0.6s;
+            svg {
                     path{
-                        fill: white;
+                        transition: all 0.6s;
                     }
-                }
-
+                    &:hover {
+                        path{
+                            fill: $green;
+                            }
+                    }
+               }
             }
+           
         }
-    }
     &__overlay {
         position: fixed;
         top: 0;
