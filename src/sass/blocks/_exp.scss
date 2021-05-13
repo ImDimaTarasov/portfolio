@@ -1,7 +1,15 @@
 .exp {
-    padding-top: 120px;
+    background-color: $bg;
+    padding: 60px 0;
+    z-index: -10;
+    .wrapper {
+        padding: 60px 0;
+        border: 3px solid $bc;
+        border-radius: 10px;
+    }
     &__divider {
         margin: 25px auto 60px auto;
+        border-top-color: $orange;
     }
     &__wrapper{
         
@@ -9,6 +17,13 @@
         grid-template-columns: repeat(2, 425px);
         column-gap: 135px;
         justify-content: center;
+    }
+    &__circle {
+        &_orange {
+            &:before {
+                background-color: $orange;
+            } 
+        }
     }
     &__column {
         &-title {
@@ -19,11 +34,11 @@
                 position: absolute;
                 width: 15px;
                 height: 15px;
-                background: $main-color;
                 border-radius: 100%;
                 left: -7px;
                 top: 50%;
                 transform: translateY(-50%);
+                background-color: $orange;
             }
         }
         ul {
@@ -32,12 +47,12 @@
                 position: relative;
                 &:after {
                     content: '';
-                    width: 1px;
+                    width: 2px;
                     height: calc(100% + 6px);
                     position: absolute;
                     top: -9px;
-                    left: 0;
-                    background-color: #000;
+                    left: -1px;
+                    background-color: $bc;
                 }
             }
         }
@@ -46,10 +61,10 @@
         &:before {
             content: '';
             top: 63px;
-            height: 1px;
+            height: 2px;
             width: 43px;
             position: absolute;
-            background-color: #000;
+            background-color: $bc;
         }
         &-head {
             padding: 45px 0 0 100px;
@@ -61,13 +76,15 @@
             left: 43px;
             img{
                 position: absolute;
-                top: 15px;
+                top: 9px;
                 left: 15px;
             }
         }
         &-subtitle{
             font-size: 13px;
             line-height: 18px;
+            font-weight: 700;
+            color: $text;
         }
         &-body {
             padding-left: 43px;
@@ -75,6 +92,7 @@
             font-weight: 500;
             font-size: 12px;
             line-height: 18px;
+            color: $text;
         }
     }
 }

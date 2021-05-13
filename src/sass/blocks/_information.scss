@@ -1,9 +1,13 @@
+.information {
+    background-color: $bg;
+}
 .about{
-    padding-top: 120px;
+    padding: 60px 0;
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 70px;
-    
+    border: 3px solid $bc;
+    border-radius: 10px;
     &__subtitle {
         position: relative;
         padding-left: 14px;
@@ -18,7 +22,7 @@
         font-weight: 500;
         font-size: 14px;
         line-height: 21px;
-        color: #000000;
+        color: $text;
     }
     &__blocks {
         margin-top: 40px;
@@ -31,15 +35,25 @@
     &-block {
         margin-left: 56px;
         position: relative;
+        border: 2px solid $bc;
+        border-radius: 10px;
+        padding: 5px;
         &__circle {
             position: absolute;
             left: -56px;
             @include before_circle;
+            z-index: 2;
             img{
                 position: absolute;
                 top: 15px;
                 left: 15px;
             }
+        }
+        &__text {
+            line-height: 18px;
+            font-size: 13px;
+            font-weight: 500;
+            color: $text;
         }
     }
 }
