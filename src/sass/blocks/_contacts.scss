@@ -1,7 +1,11 @@
 .contacts {
-    padding: 120px 0 20px 0;
+    .wrap{
+        padding-bottom: 10px;
+    }
+    padding: 50px 0 10px 0;
+    background-color: $bg;
     &__wrapper {
-        padding: 0 35px 0 52px;
+        // padding: 0 35px 0 52px;
         display: grid;
         grid-template-columns: 1fr 2fr;
         gap: 70px;
@@ -11,9 +15,13 @@
         padding-left: 14px;
         @include before_circle;
         z-index: 2;
+        &:before{
+            background-color: $blue;
+        }
     }
     &__divider {
         margin-top: 4px;
+        border-top-color: $blue;
     }
     &__text {
         margin-top: 20px;
@@ -23,6 +31,20 @@
         width: 135px;
         display: flex;
         justify-content: space-between;
+        a {
+            svg{
+                transition: all 0.6s;
+            }
+            &:hover {
+                svg {
+                    transform: scale(1.2);
+                    path{
+                        fill: $blue;
+                    }
+                }
+            }
+        }
+        
     }
     &__form {
         margin-top: 30px;
@@ -30,15 +52,26 @@
         grid-template: 45px 190px 45px / repeat(2, 280px);
         column-gap: 25px;
         row-gap: 30px;
+        input {
+            outline: none;
+            border: 2px solid $bc;
+            border-radius: 10px;
+            background-color: $bg;
+            color: $text;
+            &:focus {
+                border-color:  $blue;
+            }
+        }
         label {
             display: block;
             position: absolute;
             height: 18px;
             padding: 0 8px;
-            background-color: white;
+            background-color: $bg;
             font-size: 12px;
             top: -7px;
             left: 12px;
+            color: white;
         }
     }
     &__triggers {
@@ -54,6 +87,9 @@
         align-items: center;
         input {
             margin-right: 10px;
+        }
+        span {
+            color: $text;
         }
         a {
             color: blue;
@@ -73,13 +109,22 @@
     &__textarea {
         position: relative;
         grid-column: 1/3;
+        background-color: $bg;
         textarea {
+            outline: none;
             width: 100%;
             height: 100%;
             resize: none;
             padding: 20px 20px;
             font-size: 12px;
             font-weight: 500;
+            background-color: $bg;
+            border: 2px solid $bc;
+            border-radius: 10px;
+            color: $text;
+            &:focus {
+                border-color:  $blue;
+            }
         }
 
     }
@@ -88,5 +133,10 @@
         font-weight: bold;
         font-size: 14px;
         line-height: 21px;
+        background-color: $blue;
+        border-radius: 10px;
+        &:active {
+            background-color: #0f7480;
+        }
     }
 }

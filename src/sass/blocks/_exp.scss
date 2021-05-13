@@ -1,14 +1,9 @@
 .exp {
     background-color: $bg;
-    padding: 60px 0;
+    padding-top: 50px;
     z-index: -10;
-    .wrapper {
-        padding: 60px 0;
-        border: 3px solid $bc;
-        border-radius: 10px;
-    }
     &__divider {
-        margin: 25px auto 60px auto;
+        margin: 25px auto 50px auto;
         border-top-color: $orange;
     }
     &__wrapper{
@@ -17,13 +12,6 @@
         grid-template-columns: repeat(2, 425px);
         column-gap: 135px;
         justify-content: center;
-    }
-    &__circle {
-        &_orange {
-            &:before {
-                background-color: $orange;
-            } 
-        }
     }
     &__column {
         &-title {

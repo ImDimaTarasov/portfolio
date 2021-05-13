@@ -2,20 +2,24 @@
     background-color: $bg;
 }
 .about{
-    padding: 60px 0;
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 70px;
-    border: 3px solid $bc;
-    border-radius: 10px;
     &__subtitle {
         position: relative;
-        padding-left: 14px;
+        padding-left: 13px;
         @include before_circle;
         z-index: 2;
+        &:before {
+            background-color: $yellow;
+        }
+        span {
+            color: black;
+        }
     }
     &__divider {
         margin: 4px 0 20px 0;
+        border-top-color: $yellow;
     }
     &__text {
         width: 570px;
@@ -43,10 +47,19 @@
             left: -56px;
             @include before_circle;
             z-index: 2;
+            &:before {
+                background-color: $yellow;
+            }
             img{
                 position: absolute;
-                top: 15px;
-                left: 15px;
+                top: 8px;
+                left: 6px;
+            }
+            &_center {
+                img{
+                    left: 12px;
+                    top: 7px;
+                }
             }
         }
         &__text {

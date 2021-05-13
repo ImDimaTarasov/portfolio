@@ -1,5 +1,6 @@
 .skills {
-    padding-top: 120px;
+    background-color: $bg;
+    padding-top: 50px;
     &__wrapper {
         display: grid;
         grid-template-columns: repeat(3, 270px);
@@ -7,17 +8,31 @@
         justify-content: center;
         grid-auto-rows: 270px;
     }
+    &__divider {
+        margin: 25px auto 50px auto;
+        border-top-color: $green;
+    }
     &-block {
-        border: 1px solid black;
+        border: 2px solid $bc;
+        border-radius: 10px;
         padding: 30px 30px 25px 30px;
+        img {
+            width: 80px;
+            height: 80px
+        }
+        
         &_title {
             margin-top: 10px;
         }
         &_text {
             margin-top: 10px;
+            font-size: 14px;
+            font-weight: 500;
+            color: $text;
         }
     }
     &__container {
+        padding: 0 10px;
         margin-top: 120px;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
