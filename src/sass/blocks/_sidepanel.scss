@@ -13,13 +13,67 @@
         height: 70px;
         width: 2px;
         background-color: white;
+        transition: all 0.8s;
+        &_yellow {  
+            background-color: $yellow;
+        }
+        &_orange {
+            background-color: $orange;
+        }
+        &_green {
+            background-color: $green;
+        }
+        &_pink {
+            background-color: $pink;
+        }
+        &_blue {
+            background-color: $blue;
+        }
     }
     &__link{
 
         svg{
+            path{
+                transition: all 1s;
+            }
             transition: all 0.6s;
             &:hover {
             transform: rotate(90deg) scale(1.5);
+            }
+        }
+        &_yellow {
+            svg {
+                path {
+                    fill: $yellow;
+                }
+            }
+        }
+        &_orange {
+            svg {
+                path {
+                    fill: $orange;
+                }
+            }
+        }
+        &_green {
+            svg {
+                path {
+                    fill: $green;
+                }
+            }
+        }
+        &_pink {
+            svg {
+                path {
+                    fill: $pink;
+                }
+            }
+        }
+        &_blue {
+            svg {
+                path {
+                    fill: $blue;
+                }
             }
         }
     }
@@ -30,6 +84,23 @@
         font-size: 16px;
         line-height: 30px;
         color: white;
+        transition: all 0.5s;
+        &_yellow {  
+            color: $yellow;
+        }
+        &_orange {
+            color: $orange;
+        }
+        &_green {
+            color: $green;
+        }
+        &_pink {
+            color: $pink;
+        }
+        &_blue {
+            color: $blue;
+        }
     }
+    
 
 }
