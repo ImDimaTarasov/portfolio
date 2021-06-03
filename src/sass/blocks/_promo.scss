@@ -12,7 +12,12 @@
         padding-left: 14px;
         @include before_circle;
         z-index: 2;
-        
+        &:before {
+            top: -21%;
+        }
+        span {
+            font-size: 24px;
+        }
     }
     &__btns {
         margin-top: 25px;

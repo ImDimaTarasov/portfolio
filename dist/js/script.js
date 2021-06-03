@@ -1,3 +1,28 @@
+$(document).ready( function() {
+
+    $('form').submit(function(e) {
+        e.preventDefault();
+        $.ajax({
+            type: "POST",
+            url: "mailer/smart.php",
+            data: $(this).serialize()
+        }).done(function() {
+            $(this).find("input").val("");
+            $('.modal, .overlay').fadeIn();
+
+            $("form").trigger("reset");
+        });
+        return false;
+    });
+        
+    //modal 
+    $('.modal__close, .overlay').on('click', function (){
+        $('.overlay, .modal').fadeOut();
+    });
+
+});
+
+
 
 //smooth scroll
 let links = document.querySelectorAll('[href^="#"]'),
@@ -67,7 +92,19 @@ const menu = document.querySelector('.menu'),
     deleteClass(overMenu);
 
 
+//modal 
+
+// const modalWindow = document.querySelector('.modal'),
+//     modalOverlay = document.querySelector('.overlay'),
+//     modalClose = document.querySelector('.modal__close');
+
+//     modalClose.addEventListener('click', () => {
+//         modalWindow.classList.remove('active');
+//         modalOverlay.classList.remove('active');
+//     });
     
+
+
 
 // skills-languages
 const percents = document.querySelectorAll('.skills-box_percent'),
@@ -163,3 +200,5 @@ const panelDivider = document.querySelector('.sidepanel__divider'),
             arrow.classList.add('pageUp_blue');
         }
     });
+
+
