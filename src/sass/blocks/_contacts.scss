@@ -4,6 +4,14 @@
     }
     padding: 50px 0 10px 0;
     background-color: $bg;
+    &__photo {
+        padding-left: 50px;
+        padding-top: 50px;
+       img {
+        width: 100%;
+     
+       }
+    }
     &__wrapper {
         display: grid;
         grid-template-columns: 1fr 2fr;

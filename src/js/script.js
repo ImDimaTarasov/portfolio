@@ -19,7 +19,6 @@ $(document).ready( function() {
     $('.modal__close, .overlay').on('click', function (){
         $('.overlay, .modal').fadeOut();
     });
-
 });
 
 
@@ -92,19 +91,6 @@ const menu = document.querySelector('.menu'),
     deleteClass(overMenu);
 
 
-//modal 
-
-// const modalWindow = document.querySelector('.modal'),
-//     modalOverlay = document.querySelector('.overlay'),
-//     modalClose = document.querySelector('.modal__close');
-
-//     modalClose.addEventListener('click', () => {
-//         modalWindow.classList.remove('active');
-//         modalOverlay.classList.remove('active');
-//     });
-    
-
-
 
 // skills-languages
 const percents = document.querySelectorAll('.skills-box_percent'),
@@ -124,17 +110,25 @@ const panelDivider = document.querySelector('.sidepanel__divider'),
 
     window.addEventListener('scroll', function() {
         let scrollPage = window.pageYOffset;
-
+        if (scrollPage < 430) {
+            arrow.style.display = 'none';
+        } else {
+            arrow.style.display = 'block';
+        }
         if (scrollPage < 430){
             panelDivider.classList.remove('sidepanel__divider_yellow');
+            panelDivider.classList.remove('sidepanel__divider_blue');
 
             sidepanelText.classList.remove('sidepanel__text_yellow');
+            sidepanelText.classList.remove('sidepanel__text_blue');
 
             sidepanelIcons.forEach(item => {
                 item.classList.remove('sidepanel__link_yellow');
             });
+            sidepanelIcons.forEach(item => {
+                item.classList.remove('sidepanel__link_blue');
+            });
 
-            arrow.classList.remove('pageUp_yellow');
         } else if (scrollPage >= 430 && scrollPage < 1150) {
 
             panelDivider.classList.add('sidepanel__divider_yellow');
@@ -147,7 +141,6 @@ const panelDivider = document.querySelector('.sidepanel__divider'),
                 item.classList.add('sidepanel__link_yellow');
                 item.classList.remove('sidepanel__link_orange');
             });
-            
             arrow.classList.add('pageUp_yellow');
             arrow.classList.remove('pageUp_orange');
         } else if (scrollPage >= 1150 && scrollPage < 1800) {

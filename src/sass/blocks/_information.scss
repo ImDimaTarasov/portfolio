@@ -5,6 +5,14 @@
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 70px;
+    &__photo {
+        padding-left: 20px;
+        img{
+            height: 100%;
+            width: 100%;
+        }
+        
+    }
     &__subtitle {
         position: relative;
         padding-left: 13px;

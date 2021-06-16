@@ -8,7 +8,9 @@
     z-index: 3;
     top: 210px;
     left: 50px;
-    
+    &__icon {
+        transform: rotate(-90deg);            
+    }
     &__divider {
         height: 70px;
         width: 2px;
