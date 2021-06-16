@@ -1,0 +1,54 @@
+.pageUp {
+    display: none;
+    position: fixed;
+    bottom:30px;
+    right:30px;
+    width:40px;
+    height:40px;
+    svg {
+        width:100%;
+        path {
+            transition: all 0.6s;
+        }
+    }
+    &_yellow {
+        
+        svg {
+            path {
+                fill: $yellow;
+            }
+        }
+    }
+    &_orange {
+
+        svg {
+            path {
+                fill: $orange;
+            }
+        }
+    }
+    &_green {
+
+        svg {
+            path {
+                fill: $green;
+            }
+        }
+    }
+    &_pink {
+
+        svg {
+            path {
+                fill: $pink;
+            }
+        }
+    }
+    &_blue {
+        svg {
+            path {
+                fill: $blue;
+            }
+        }
+    }
+    
+}
